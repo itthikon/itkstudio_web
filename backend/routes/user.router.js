@@ -1,11 +1,9 @@
-const userRouter = (router) => {
-  router.get("/", (req, res) => {
-    res.send("Hello World!");
-  });
+import userController from '../controllers/user.controller.js'
 
-  router.get("/itthikon", (req, res) => {
-    res.send("Itthikon!");
-  });
+const userRouter = (router) => {
+  router.get("/", userController.helloWorld)
+  router.get("/itthikon", userController.itthikon)
+
 };
 
 export default userRouter;
