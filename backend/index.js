@@ -1,4 +1,8 @@
 import express from 'express'
+import router from './routes/router.js'
+
+app.use(router)
+
 const app = express()
 const port = 3000
 
